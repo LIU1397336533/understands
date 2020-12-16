@@ -14,15 +14,15 @@
     </div>
     <div class="footer">
       <div>
-        <i class="icon iconfont icon-fangdajing"></i>
+        <i class="icon iconfont icon-wenda" @click="Questions"></i>
         <span>问答</span>
       </div>
       <div>
-        <i class="icon iconfont icon-fangdajing"></i>
+        <i class="icon iconfont icon-faxian" @click="Discover "></i>
         <span>发现</span>
       </div>
       <div>
-        <i class="icon iconfont icon-fangdajing"></i>
+        <i class="icon iconfont icon-wode" @click="Mine"></i>
         <span>我的</span>
       </div>
     </div>
@@ -30,6 +30,21 @@
     <router-view/>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    Questions() {
+      this.$router.push({ path: "/home" });
+    },
+    Discover() {
+      this.$router.push({ path: "/discover" });
+    },
+    Mine() {
+      this.$router.push({ path: "/mine" });
+    },
+  }
+}
+</script>
 
 <style lang="scss">
 html,body{

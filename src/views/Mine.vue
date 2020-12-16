@@ -1,5 +1,11 @@
 <template>
-  <div id="mine"></div>
+  <div id="mine">
+    <div class="header">
+      <i class="icon iconfont icon-next"></i>
+      <span>我的</span>
+      <span></span>
+    </div>
+  </div>
 </template>
 
 <script>
