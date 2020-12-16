@@ -1,32 +1,103 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="header">
+      <div class="headtop">
+        <span class="zi">知之为知之</span>
+      </div>
+      <div class="headbottom">
+        <i class="icon iconfont icon-fangdajing"></i>
+        <input type="text" placeholder="注册资本缴纳有何要求？">
+      </div>
     </div>
-    <router-view/>
+    <div class="content">
+      <router-view/>
+    </div>
+    <div class="footer">
+      <div>
+        <i class="icon iconfont icon-fangdajing"></i>
+        <span>问答</span>
+      </div>
+      <div>
+        <i class="icon iconfont icon-fangdajing"></i>
+        <span>发现</span>
+      </div>
+      <div>
+        <i class="icon iconfont icon-fangdajing"></i>
+        <span>我的</span>
+      </div>
+    </div>
+
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style lang="scss">
+html,body{
+  width: 100%;
+  height: 100%;
 }
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+  #app{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .header{
+      width: 100%;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      background: #0084ff;
+      .headtop{
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+        color: #fff;
+      }
+      .headbottom{
+        width: 100%;
+        padding: 20px 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-sizing: border-box;
+        i{
+          font-size: 28px;
+          padding-left: 30px;
+        }
+        input{
+          border:none;
+          outline: none;
+          padding-left: 20px;
+        }
+      }
+    }
+    .content{
+      flex: 1;
+      background: #ecf1f4;
+    }
+    .footer{
+      width: 100%;
+      position: fixed;
+      bottom:0;
+      left:0;
+      background: #fff;
+      display: flex;
+      div{
+        width: 33.3333%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        span{
+          font-size: 26px;
+        }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+        .iconfont{
+          font-size: 40px;
+        }
+      }
+    }
+  }
 </style>
+
