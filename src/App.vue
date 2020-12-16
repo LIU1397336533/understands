@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
     <div class="header">
       <div class="headtop">
         <span class="zi">知之为知之</span>
@@ -28,9 +27,7 @@
       </div>
     </div>
 
-=======
     <router-view/>
->>>>>>> fe68a8825a9d3f9135f3f20d8a00701818c70ac0
   </div>
 </template>
 
